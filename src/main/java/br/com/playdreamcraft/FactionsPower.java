@@ -1,6 +1,9 @@
 package br.com.playdreamcraft;
 
+import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
+
+import java.io.File;
 
 public class FactionsPower extends JavaPlugin {
 
@@ -23,5 +26,15 @@ public class FactionsPower extends JavaPlugin {
 
     public void info(String info){
         this.getServer().getConsoleSender().sendMessage(info.replaceAll("&", "§"));
+    }
+
+    private void setupConfig(){
+        if(!new File(getDataFolder().getPath(), "config.yml").exists()){
+            saveDefaultConfig();
+        }
+    }
+
+    public FileConfiguration getConf(){
+        return getConfig();
     }
 }
