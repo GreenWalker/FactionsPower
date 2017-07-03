@@ -1,4 +1,4 @@
-package me.floydz69.CraftX1Plus.config;
+package br.com.playdreamcraft.config;
 
 import java.io.*;
 import java.util.logging.Level;

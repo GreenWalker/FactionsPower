@@ -2,6 +2,7 @@ package br.com.playdreamcraft.events;
 
 
 import br.com.playdreamcraft.FactionsPower;
+import br.com.playdreamcraft.Util.UtilMethods;
 import com.massivecraft.factions.Factions;
 import com.massivecraft.factions.entity.MPlayer;
 import org.bukkit.entity.Player;
@@ -9,6 +10,7 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
+import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.inventory.AnvilInventory;
 
 public class MainEvents implements Listener {
@@ -28,5 +30,10 @@ public class MainEvents implements Listener {
     @EventHandler
     public void onRightClick(PlayerInteractEvent event){
         MPlayer player = MPlayer.get(event.getPlayer());
+    }
+
+    @EventHandler
+    public void onJoin(PlayerJoinEvent event){
+        UtilMethods.getInstance().setPower(event.getPlayer(), 0);
     }
 }

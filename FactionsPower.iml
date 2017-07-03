@@ -26,11 +26,22 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$USER_HOME$/Downloads/Factions.jar!/" />
+          <root url="jar://$USER_HOME$/Desktop/sv/plugins/Factions.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES>
-          <root url="jar://$USER_HOME$/Downloads/Factions.jar!/" />
+          <root url="jar://$USER_HOME$/Desktop/sv/plugins/Factions.jar!/" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../../plugins/backups/fullpvp/spigot.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="jar://$MODULE_DIR$/../../plugins/backups/fullpvp/spigot.jar!/" />
         </SOURCES>
       </library>
     </orderEntry>
