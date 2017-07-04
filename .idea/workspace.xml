@@ -8,15 +8,7 @@
   <component name="ChangeListManager">
     <list default="true" id="5d2e3986-8a5e-461f-90a8-e41f2beea7ee" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/playdreamcraft/Cooldown.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/playdreamcraft/Cooldown.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/playdreamcraft/FactionsPower.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/playdreamcraft/FactionsPower.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/playdreamcraft/Util/ItemType.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/playdreamcraft/Util/ItemType.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/playdreamcraft/Util/ItemUtils.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/playdreamcraft/Util/ItemUtils.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/playdreamcraft/Util/UtilMethods.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/playdreamcraft/Util/UtilMethods.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/playdreamcraft/commands/MainCommands.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/playdreamcraft/commands/MainCommands.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/playdreamcraft/events/MainEvents.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/playdreamcraft/events/MainEvents.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/config.yml" afterPath="$PROJECT_DIR$/src/main/resources/config.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/lang.yml" afterPath="$PROJECT_DIR$/src/main/resources/lang.yml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -33,7 +25,7 @@
       <file leaf-file-name="MainEvents.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/br/com/playdreamcraft/events/MainEvents.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="494">
+            <state relative-caret-position="508">
               <caret line="61" column="64" lean-forward="false" selection-start-line="61" selection-start-column="64" selection-end-line="61" selection-end-column="64" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -44,33 +36,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MainCommands.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/playdreamcraft/commands/MainCommands.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="185">
-              <caret line="94" column="25" lean-forward="false" selection-start-line="94" selection-start-column="25" selection-end-line="94" selection-end-column="25" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="config.yml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/config.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="31" lean-forward="true" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="31" />
+            <state relative-caret-position="357">
+              <caret line="21" column="2" lean-forward="true" selection-start-line="21" selection-start-column="2" selection-end-line="21" selection-end-column="2" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UtilMethods.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/playdreamcraft/Util/UtilMethods.java">
+      <file leaf-file-name="ItemUtils.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/playdreamcraft/Util/ItemUtils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="429">
-              <caret line="34" column="16" lean-forward="false" selection-start-line="34" selection-start-column="16" selection-end-line="34" selection-end-column="16" />
+            <state relative-caret-position="426">
+              <caret line="109" column="31" lean-forward="false" selection-start-line="109" selection-start-column="31" selection-end-line="109" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -98,7 +78,6 @@
         <option value="$MAVEN_REPOSITORY$/org/spigotmc/spigot-api/1.8-R0.1-SNAPSHOT/spigot-api-1.8-R0.1-SNAPSHOT.jar!/org/bukkit/configuration/file/YamlConfiguration.class" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/playdreamcraft/Coldown.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/playdreamcraft/Util/Methods.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/playdreamcraft/Util/Item.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/playdreamcraft/Util/fireworkutil/FireWorkApiDamageable.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/playdreamcraft/config/ConfigHandler.java" />
         <option value="$PROJECT_DIR$/src/main/resources/plugin.yml" />
@@ -106,11 +85,12 @@
         <option value="$PROJECT_DIR$/src/main/java/br/com/playdreamcraft/Util/ItemType.java" />
         <option value="$PROJECT_DIR$/src/main/resources/config.yml" />
         <option value="$PROJECT_DIR$/src/main/resources/lang.yml" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/playdreamcraft/Util/ItemUtils.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/playdreamcraft/Util/UtilMethods.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/playdreamcraft/Cooldown.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/playdreamcraft/events/MainEvents.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/playdreamcraft/commands/MainCommands.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/playdreamcraft/Util/Item.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/playdreamcraft/Util/ItemUtils.java" />
       </list>
     </option>
   </component>
@@ -551,7 +531,14 @@
       <option name="project" value="LOCAL" />
       <updated>1499162420047</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Fixed more features">
+      <created>1499209018869</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1499209018869</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -591,7 +578,8 @@
     <MESSAGE value="Added sound on use power item" />
     <MESSAGE value="Fixed some things" />
     <MESSAGE value="Fixed ArrayIndexOutOfAbounds in some classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed ArrayIndexOutOfAbounds in some classes" />
+    <MESSAGE value="Fixed more features" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed more features" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -945,18 +933,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/playdreamcraft/Util/Item.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="25" column="17" lean-forward="true" selection-start-line="25" selection-start-column="17" selection-end-line="25" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#500#501#0" expanded="true" />
-            <element signature="e#559#560#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/Desktop/sv/plugins/Factions.jar!/com/massivecraft/factions/entity/MPlayer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -973,16 +949,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/playdreamcraft/Util/ItemUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="34" column="9" lean-forward="true" selection-start-line="34" selection-start-column="9" selection-end-line="34" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/br/com/playdreamcraft/Cooldown.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
@@ -990,14 +956,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="31" lean-forward="true" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1011,9 +969,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/playdreamcraft/commands/MainCommands.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="695">
+          <caret line="94" column="25" lean-forward="false" selection-start-line="94" selection-start-column="25" selection-end-line="94" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/playdreamcraft/Util/Item.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="314">
+          <caret line="53" column="9" lean-forward="false" selection-start-line="53" selection-start-column="9" selection-end-line="53" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="2" lean-forward="true" selection-start-line="21" selection-start-column="2" selection-end-line="21" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/br/com/playdreamcraft/events/MainEvents.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
+        <state relative-caret-position="508">
           <caret line="61" column="64" lean-forward="false" selection-start-line="61" selection-start-column="64" selection-end-line="61" selection-end-column="64" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1023,10 +1009,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/playdreamcraft/commands/MainCommands.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/playdreamcraft/Util/ItemUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="94" column="25" lean-forward="false" selection-start-line="94" selection-start-column="25" selection-end-line="94" selection-end-column="25" />
+        <state relative-caret-position="426">
+          <caret line="109" column="31" lean-forward="false" selection-start-line="109" selection-start-column="31" selection-end-line="109" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

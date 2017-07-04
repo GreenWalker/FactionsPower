@@ -107,9 +107,8 @@ public class ItemUtils {
     public Item suchItem(String path, int value){
         Item it = new Item(config.getString("Poderes." + path + ".item"));
         it.setName(config.getString("Poderes." + path + ".nome"))
-                .setLore(lang.getStringList("Poderes." + path + ".lore".replace("%valor%", String.valueOf(config.getDouble("Poderes." + path + "valor")))))
-                .setValue(value > 0 ? value : 1).hideAttibutes()
-                ;
+                .setLore(config.getStringList("Poderes." + path + ".lore".replace("%valor%", String.valueOf(config.getInt("Poderes." + path + "valor")))))
+                .setValue(value > 0 ? value : 1).hideAttibutes();
         return it;
     }
 
