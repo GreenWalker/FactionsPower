@@ -6,21 +6,9 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5d2e3986-8a5e-461f-90a8-e41f2beea7ee" name="Default" comment="New Commit for add more things">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/br/com/playdreamcraft/Util/fireworkutil/FireWorkApiDamageable.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/br/com/playdreamcraft/commands/MainCommands.java" />
+    <list default="true" id="5d2e3986-8a5e-461f-90a8-e41f2beea7ee" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FactionsPower.iml" afterPath="$PROJECT_DIR$/FactionsPower.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/playdreamcraft/Cooldown.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/playdreamcraft/Cooldown.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/playdreamcraft/FactionsPower.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/playdreamcraft/FactionsPower.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/playdreamcraft/Util/Item.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/playdreamcraft/Util/Item.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/playdreamcraft/Util/ItemType.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/playdreamcraft/Util/ItemType.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/playdreamcraft/Util/ItemUtils.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/playdreamcraft/Util/ItemUtils.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/playdreamcraft/Util/UtilMethods.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/playdreamcraft/Util/UtilMethods.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/playdreamcraft/config/ConfigHandler.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/playdreamcraft/config/ConfigHandler.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/playdreamcraft/events/MainEvents.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/playdreamcraft/events/MainEvents.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/config.yml" afterPath="$PROJECT_DIR$/src/main/resources/config.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/lang.yml" afterPath="$PROJECT_DIR$/src/main/resources/lang.yml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -44,6 +32,18 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="MainEvents.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/playdreamcraft/events/MainEvents.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="327">
+              <caret line="59" column="0" lean-forward="true" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="Item.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/br/com/playdreamcraft/Util/Item.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -58,7 +58,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UtilMethods.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="UtilMethods.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/br/com/playdreamcraft/Util/UtilMethods.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="349">
@@ -133,7 +133,6 @@
         <option value="$PROJECT_DIR$/src/main/resources/config.yml" />
         <option value="$PROJECT_DIR$/src/main/resources/lang.yml" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/playdreamcraft/commands/MainCommands.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/playdreamcraft/events/MainEvents.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/playdreamcraft/FactionsPower.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/playdreamcraft/Util/ItemUtils.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/playdreamcraft/Util/ItemType.java" />
@@ -142,6 +141,7 @@
         <option value="$PROJECT_DIR$/src/main/java/br/com/playdreamcraft/Util/fireworkutil/FireWorkApiDamageable.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/playdreamcraft/config/ConfigHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/playdreamcraft/Util/UtilMethods.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/playdreamcraft/events/MainEvents.java" />
       </list>
     </option>
   </component>
@@ -554,7 +554,14 @@
       <option name="project" value="LOCAL" />
       <updated>1499132451898</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="New Commit for add more things">
+      <created>1499160339558</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1499160339558</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -654,7 +661,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -740,7 +749,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="31" column="1" lean-forward="true" selection-start-line="31" selection-start-column="1" selection-end-line="31" selection-end-column="1" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -790,7 +801,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -940,14 +953,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/playdreamcraft/events/MainEvents.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-102">
-          <caret line="12" column="51" lean-forward="false" selection-start-line="12" selection-start-column="51" selection-end-line="12" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/br/com/playdreamcraft/Util/ItemUtils.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="407">
@@ -1025,6 +1030,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="349">
           <caret line="120" column="1" lean-forward="true" selection-start-line="120" selection-start-column="1" selection-end-line="120" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/playdreamcraft/events/MainEvents.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="327">
+          <caret line="59" column="0" lean-forward="true" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

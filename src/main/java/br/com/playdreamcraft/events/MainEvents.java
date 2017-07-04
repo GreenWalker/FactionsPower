@@ -4,6 +4,7 @@ package br.com.playdreamcraft.events;
 import br.com.playdreamcraft.Cooldown;
 import br.com.playdreamcraft.FactionsPower;
 import br.com.playdreamcraft.Util.UtilMethods;
+import org.bukkit.Sound;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -52,6 +53,7 @@ public class MainEvents implements Listener {
                 }
                     UtilMethods.getInstance().setPower(item, p);
                     UtilMethods.getInstance().fireWork(p.getLocation());
+                    p.playSound(p.getLocation(), Sound.NOTE_PLING, 1.5F, 1.5F);
             }
         }
     }
