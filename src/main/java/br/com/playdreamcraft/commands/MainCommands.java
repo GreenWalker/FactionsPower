@@ -24,30 +24,28 @@ public class MainCommands implements CommandExecutor {
         if(!command.getName().equalsIgnoreCase("factionspower")){
             return true;
         }
-        if(!cs.hasPermission("fc.give") || !cs.isOp()){
-            cs.sendMessage("§csem permissão");
-            return true;
-        }
-        if(args[0] == null){
+
+        if(args.length < 1){
             cs.sendMessage("§6 - - - - - - - - - - - - - - - - - - - - - -");
             cs.sendMessage("§7 Legenda: <command> = param obrigatorio | [command] param opcional");
             cs.sendMessage("\n  §3[§7-§3] §7fc give <adicional/adc | maxima/max> [quantidade(padrão 1)] [player/all]");
             cs.sendMessage("    §a   - dá um item de poder para um ou todos os jogadores");
             cs.sendMessage("§6 - - - - - - - - - - - - - - - - - - - - - -");
         }
+
         if(args[0].equalsIgnoreCase("give")){
-            if(args[1] == null){
+            if(args.length < 2){
                 cs.sendMessage("§7Você precisa especificar o tipo do item! adicional ou maxima.");
                 return true;
             }
             if(args[1].equalsIgnoreCase("adcional") || args[1].equalsIgnoreCase("adc")){
-                if(args[2] != null) {
+                if(args.length >= 3) {
                     if (!UtilMethods.getInstance().isNumber(args[2])) {
                         cs.sendMessage(lang.getStringReplaced("nao-e-numero"));
                         return true;
                     }
                 }
-                assert args[2] != null;
+
                 int i = Integer.valueOf(args[2]);
                 if(args.length == 2){
                     if(!commandSenderIsPlayer(cs)){
@@ -73,13 +71,13 @@ public class MainCommands implements CommandExecutor {
                 }
             }
             if(args[1].equalsIgnoreCase("maxima") || args[1].equalsIgnoreCase("max")){
-                if(args[2] != null) {
+                if(args.length >= 3) {
                     if (!UtilMethods.getInstance().isNumber(args[2])) {
                         cs.sendMessage(lang.getStringReplaced("nao-e-numero"));
                         return true;
                     }
                 }
-                assert args[2] != null;
+
                 int i = Integer.valueOf(args[2]);
                 if(args.length == 2){
                     if(!commandSenderIsPlayer(cs)){
