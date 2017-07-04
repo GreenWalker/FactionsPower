@@ -26,79 +26,85 @@ public class MainCommands implements CommandExecutor {
         }
 
         if(args.length < 1){
-            cs.sendMessage("§6 - - - - - - - - - - - - - - - - - - - - - -");
-            cs.sendMessage("§7 Legenda: <command> = param obrigatorio | [command] param opcional");
-            cs.sendMessage("\n  §3[§7-§3] §7fc give <adicional/adc | maxima/max> [quantidade(padrão 1)] [player/all]");
-            cs.sendMessage("    §a   - dá um item de poder para um ou todos os jogadores");
-            cs.sendMessage("§6 - - - - - - - - - - - - - - - - - - - - - -");
+            cs.sendMessage("§6 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -");
+            cs.sendMessage("§7Lg: <command> = obrigatorio | [command] opcional");
+            cs.sendMessage("\n§3[§7-§3]§7fc give <adicional/adc | maxima/max> [quantidade] [player/all]");
+            cs.sendMessage("§a- dá um item de poder para um ou todos os jogadoresz\n");
+            cs.sendMessage("§6 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -");
         }
+        if(args.length > 0) {
+            if (args[0].equalsIgnoreCase("give")) {
+                if (args.length < 2) {
+                    cs.sendMessage("§7Você precisa especificar o tipo do item! adicional ou maxima.");
+                    return true;
+                }
+                if (args[1].equalsIgnoreCase("adicional") || args[1].equalsIgnoreCase("adc")) {
+                    if (args.length >= 3) {
+                        if (!UtilMethods.getInstance().isNumber(args[2])) {
+                            cs.sendMessage(lang.getStringReplaced("nao-e-numero"));
+                            return true;
+                        }
+                    }
+                    if (args.length == 2) {
+                        if (!commandSenderIsPlayer(cs)) {
+                            cs.sendMessage("§bEste comando pode ser utilizado apenas in-game!");
+                            return true;
+                        }
+                        FactionsPower.getMain().getItemUtils().setItem((Player) cs, ItemType.Add, 1);
+                        return true;
+                    }
+                    if (args.length == 3) {
+                        if (!commandSenderIsPlayer(cs)) {
+                            cs.sendMessage("§bEste comando pode ser utilizado apenas in-game!");
+                            return true;
+                        }
+                        FactionsPower.getMain().getItemUtils().setItem((Player) cs, ItemType.Add, Integer.valueOf(args[2]));
+                        return true;
+                    }
+                    if (args.length >= 4) {
+                        if (args[3].equalsIgnoreCase("all")) {
+                            Bukkit.getOnlinePlayers().forEach(p -> FactionsPower.getMain().getItemUtils().setItem(p, ItemType.Add, Integer.valueOf(args[2])));
+                            return true;
+                        }
+                        if (Bukkit.getPlayerExact(args[3]) != null) {
+                            Player p = Bukkit.getPlayerExact(args[3]);
+                            FactionsPower.getMain().getItemUtils().setItem(p, ItemType.Add, Integer.valueOf(args[2]));
+                        }
+                    }
+                }
+                if (args[1].equalsIgnoreCase("maxima") || args[1].equalsIgnoreCase("max")) {
+                    if (args.length >= 3) {
+                        if (!UtilMethods.getInstance().isNumber(args[2])) {
+                            cs.sendMessage(lang.getStringReplaced("nao-e-numero"));
+                            return true;
+                        }
+                    }
 
-        if(args[0].equalsIgnoreCase("give")){
-            if(args.length < 2){
-                cs.sendMessage("§7Você precisa especificar o tipo do item! adicional ou maxima.");
-                return true;
-            }
-            if(args[1].equalsIgnoreCase("adcional") || args[1].equalsIgnoreCase("adc")){
-                if(args.length >= 3) {
-                    if (!UtilMethods.getInstance().isNumber(args[2])) {
-                        cs.sendMessage(lang.getStringReplaced("nao-e-numero"));
+                    if (args.length == 2) {
+                        if (!commandSenderIsPlayer(cs)) {
+                            cs.sendMessage("§bEste comando pode ser utilizado apenas in-game!");
+                            return true;
+                        }
+                        FactionsPower.getMain().getItemUtils().setItem((Player) cs, ItemType.Max, 1);
                         return true;
                     }
-                }
-
-                int i = Integer.valueOf(args[2]);
-                if(args.length == 2){
-                    if(!commandSenderIsPlayer(cs)){
-                        cs.sendMessage("§bEste comando pode ser utilizado apenas in-game!");
+                    if (args.length == 3) {
+                        if (!commandSenderIsPlayer(cs)) {
+                            cs.sendMessage("§bEste comando pode ser utilizado apenas in-game!");
+                            return true;
+                        }
+                        FactionsPower.getMain().getItemUtils().setItem((Player) cs, ItemType.Max, Integer.valueOf(args[2]));
                         return true;
                     }
-                    FactionsPower.getMain().getItemUtils().setItem((Player) cs, ItemType.Add, 1);
-                    return true;
-                }
-                if(args.length == 3) {
-                    FactionsPower.getMain().getItemUtils().setItem((Player) cs, ItemType.Add, i);
-                    return true;
-                }
-                if(args.length >= 4){
-                    if(args[3].equalsIgnoreCase("all")){
-                        Bukkit.getOnlinePlayers().forEach(p -> FactionsPower.getMain().getItemUtils().setItem(p, ItemType.Add, i));
-                        return true;
-                    }
-                    if(Bukkit.getPlayerExact(args[3]) != null){
-                        Player p = Bukkit.getPlayerExact(args[3]);
-                        FactionsPower.getMain().getItemUtils().setItem(p, ItemType.Add, i);
-                    }
-                }
-            }
-            if(args[1].equalsIgnoreCase("maxima") || args[1].equalsIgnoreCase("max")){
-                if(args.length >= 3) {
-                    if (!UtilMethods.getInstance().isNumber(args[2])) {
-                        cs.sendMessage(lang.getStringReplaced("nao-e-numero"));
-                        return true;
-                    }
-                }
-
-                int i = Integer.valueOf(args[2]);
-                if(args.length == 2){
-                    if(!commandSenderIsPlayer(cs)){
-                        cs.sendMessage("§bEste comando pode ser utilizado apenas in-game!");
-                        return true;
-                    }
-                    FactionsPower.getMain().getItemUtils().setItem((Player) cs, ItemType.Max, 1);
-                    return true;
-                }
-                if(args.length == 3) {
-                    FactionsPower.getMain().getItemUtils().setItem((Player) cs, ItemType.Max, i);
-                    return true;
-                }
-                if(args.length >= 4){
-                    if(args[3].equalsIgnoreCase("all")){
-                        Bukkit.getOnlinePlayers().forEach(p -> FactionsPower.getMain().getItemUtils().setItem(p, ItemType.Max, i));
-                        return true;
-                    }
-                    if(Bukkit.getPlayerExact(args[3]) != null){
-                        Player p = Bukkit.getPlayerExact(args[3]);
-                        FactionsPower.getMain().getItemUtils().setItem(p, ItemType.Max, i);
+                    if (args.length >= 4) {
+                        if (args[3].equalsIgnoreCase("all")) {
+                            Bukkit.getOnlinePlayers().forEach(p -> FactionsPower.getMain().getItemUtils().setItem(p, ItemType.Max, Integer.valueOf(args[2])));
+                            return true;
+                        }
+                        if (Bukkit.getPlayerExact(args[3]) != null) {
+                            Player p = Bukkit.getPlayerExact(args[3]);
+                            FactionsPower.getMain().getItemUtils().setItem(p, ItemType.Max, Integer.valueOf(args[2]));
+                        }
                     }
                 }
             }

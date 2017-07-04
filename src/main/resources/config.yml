@@ -3,7 +3,7 @@ RenomearNaBigorna: false
 Poderes:
  tempo-de-delay-para-usar-poder:
   ativo: true
-  delay: 30 #EM SEGUNDOS
+  delay: 30
  soltar-fogos-ao-usar-poder: true
  PoderMaximo:
   valor: 1.0
@@ -12,11 +12,12 @@ Poderes:
   nome: '&7Ganhe Poder &aMáximo &7(botão direito)'
   nome-msg: '&7Estrela &aMáxima'
   lore:
-   - '&7usando este item voce ganha +&a%valor%&r&7 de poder'
-  PoderAdcional: #faltou o i eu sei :(
-   valor: 1.0
-   item: 'NETHER_STAR'
-   nome: '&7Ganhe Poder &aAdcional &7(botão direito)'
-   nome-msg: '&7Estrela &aAdcional'
-   lore:
-      - '&7usando este item voce ganha +&a%valor%&r&7 de poder adcional'
+    - '&7usando este item voce ganha +&a%valor%&r&7 de poder'
+
+ PoderAdcional:
+  valor: 1.0
+  item: 'NETHER_STAR'
+  nome: '&7Ganhe Poder &aAdcional &7(botão direito)'
+  nome-msg: '&7Estrela &aAdcional'
+  lore:
+    - '&7usando este item voce ganha +&a%valor%&r&7 de poder adcional'

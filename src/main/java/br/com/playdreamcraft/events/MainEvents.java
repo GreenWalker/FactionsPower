@@ -19,6 +19,10 @@ public class MainEvents implements Listener {
 
     private Cooldown cooldown;
 
+    public MainEvents(Cooldown cooldown) {
+        this.cooldown = cooldown;
+    }
+
     @EventHandler
     public void onClickInventory(InventoryClickEvent event){
         if(event.getWhoClicked() instanceof Player){
@@ -43,17 +47,19 @@ public class MainEvents implements Listener {
         if(event.getAction().equals(Action.RIGHT_CLICK_AIR) || event.getAction().equals(Action.RIGHT_CLICK_BLOCK)){
             if(event.getItem() != null && FactionsPower.getMain().getItemUtils().isValidItem(item) && item.hasItemMeta()){
                 if(cooldown.containsPlayerInDelay(p)) {
-                    UtilMethods.getInstance().sendTitle(p, "{\"text\":\"Aviso!\",\"color\":\"red\",\"bold\":true}", "{\"text\":\"Você não pode utilizar este item por\",\"color\":\"gray\",\"bold\":true},{\"text\":\" %tempo%\",\"color\":\"green\",\"bold\":true}"
-                            .replace("%tempo%", FactionsPower.getMain().getConf().getInt("tempo-de-delay-para-usar-poder.delay") > 60
-                                    ? String.valueOf(cooldown.convertMillisToSeconds(cooldown.getVariation(p)))
-                                    : String.valueOf(cooldown.convertMillisToMinutes(cooldown.getVariation(p)))));
+                    if(!cooldown.afterLong(p)) {
+                        UtilMethods.getInstance().sendTitle(p,
+                                "{\"text\":\"§c§lAviso!\"}",
+                                "{\"text\":\"§7Você não pode utilizar este item por §c§l%tempo%\"}".replace("%tempo%", FactionsPower.getMain().getConf().getInt("Poderes.tempo-de-delay-para-usar-poder.delay") > 60 ?
+                                cooldown.convertMillisToMinutes(cooldown.getVariation(p)) + "§r §7minutos" : cooldown.convertMillisToSeconds(cooldown.getVariation(p)) + "§r §7segundos"));
+                        return;
+                    }
                 }
-                if(FactionsPower.getMain().getConf().getBoolean("tempo-de-delay-para-usar-poder.ativo")){
+
+                if(FactionsPower.getMain().getConf().getBoolean("Poderes.tempo-de-delay-para-usar-poder.ativo")){
                     cooldown.putPlayerOnDelay(p);
                 }
                     UtilMethods.getInstance().setPower(item, p);
-                    UtilMethods.getInstance().fireWork(p.getLocation());
-                    p.playSound(p.getLocation(), Sound.NOTE_PLING, 1.5F, 1.5F);
             }
         }
     }

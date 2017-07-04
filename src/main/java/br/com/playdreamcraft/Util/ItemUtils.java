@@ -25,8 +25,7 @@ public class ItemUtils {
         this.lang = lang;
     }
 
-    public void removeAmount(@Nonnull Inventory inventory, int amount) {
-        ItemStack item = this.getItem(inventory);
+    public void removeAmount(@Nonnull ItemStack item, int amount, Inventory inventory) {
         int currentAmount = item.getAmount();
         int newAmount = currentAmount - amount;
         if (item.getAmount() > 1 && newAmount > 0) {
@@ -64,6 +63,7 @@ public class ItemUtils {
                playerinv.setItem(playerinv.firstEmpty(), suchItem("PoderAdcional", value).addEnchantment(Enchantment.DURABILITY, 5).build());
                player.sendMessage(lang.getStringReplaced("item-recebido", "%item%", config.getString("Poderes.PoderAdcional.nome-msg").replaceAll("&", "§")
                        , "%quantidade%", String.valueOf(value)));
+               break;
             }
             case Max:{
                 if(playerinv.firstEmpty() == -1){
@@ -73,9 +73,10 @@ public class ItemUtils {
                 playerinv.setItem(playerinv.firstEmpty(), suchItem("PoderMaximo", value).addEnchantment(Enchantment.DURABILITY, 10).build());
                 player.sendMessage(lang.getStringReplaced("item-recebido", "%item%", config.getString("Poderes.PoderMaximo.nome-msg").replaceAll("&", "§")
                         , "%quantidade%", String.valueOf(value)));
+                break;
             }
             default:{
-
+                return;
             }
         }
 

@@ -25,30 +25,27 @@ public class Cooldown {
     }
 
     public void putPlayerOnDelay(Player player){
-        delayed.put(player.getName(), System.currentTimeMillis() + FactionsPower.getMain().getConf().getInt("tempo-de-delay-para-usar-poder.delay"));
+        Date date = new Date();
+        date.setSeconds(date.getSeconds() + FactionsPower.getMain().getConf().getInt("Poderes.tempo-de-delay-para-usar-poder.delay"));
+        delayed.put(player.getName(), date.getTime());
     }
 
     public void removePlayerOfDelay(Player player){
-        if(containsPlayerInDelay(player)){
-            delayed.remove(player.getName());
-        }
+        delayed.remove(player.getName());
     }
 
     public boolean containsPlayerInDelay(Player player){
-        return delayed.containsKey(player.getName()) && !afterLong(player);
+        return delayed.containsKey(player.getName());
     }
 
     public long getPlayerDelay(Player player){
-        if(containsPlayerInDelay(player)){
-            return this.delayed.get(player.getName());
-        }
-        return 0;
+        return this.delayed.get(player.getName());
     }
 
     public boolean afterLong(Player p){
-        Date vehement = new Date(getPlayerDelay(p));
-        Date atual = new Date();
-        return atual.after(vehement);
+        Date date = new Date(getPlayerDelay(p));
+        Date venc = new Date();
+        return venc.after(date);
     }
 
     public String convertMillisToSeconds(long l){
@@ -62,6 +59,6 @@ public class Cooldown {
     }
 
     public long getVariation(Player p){
-        return getPlayerDelay(p) - System.currentTimeMillis();
+        return new Date(getPlayerDelay(p)).getTime() - new Date().getTime();
     }
 }

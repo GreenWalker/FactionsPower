@@ -7,10 +7,7 @@ import net.minecraft.server.v1_8_R3.IChatBaseComponent;
 import net.minecraft.server.v1_8_R3.PacketPlayOutChat;
 import net.minecraft.server.v1_8_R3.PacketPlayOutTitle;
 import net.minecraft.server.v1_8_R3.PlayerConnection;
-import org.bukkit.Bukkit;
-import org.bukkit.Color;
-import org.bukkit.FireworkEffect;
-import org.bukkit.Location;
+import org.bukkit.*;
 import org.bukkit.craftbukkit.v1_8_R3.entity.CraftPlayer;
 import org.bukkit.entity.Firework;
 import org.bukkit.entity.Player;
@@ -46,9 +43,11 @@ public class UtilMethods implements Methods {
                 player.sendMessage(FactionsPower.getMain().getLang().getStringReplaced("chegou-ao-limite"));
                 return;
             }
-            FactionsPower.getMain().getItemUtils().removeAmount(player.getInventory(), 1);
+            FactionsPower.getMain().getItemUtils().removeAmount(player.getItemInHand(), 1, player.getInventory());
             mp.setPowerBoost(atual + novo);
             String msg = FactionsPower.getMain().getLang().getStringReplaced("action-bar-mensagem.mensagem-max");
+            fireWork(player.getLocation());
+            player.playSound(player.getLocation(), Sound.NOTE_PLING, 1.5F, 1.5F);
             msg = msg.replaceAll("&", "§").replace("%valor%", new DecimalFormat("0.##").format(atual + novo));
             this.sendActionBar(player, "{\"text\":\"%msg%\"}"
                     .replace("%msg%", msg));
@@ -60,10 +59,12 @@ public class UtilMethods implements Methods {
                 player.sendMessage(FactionsPower.getMain().getLang().getStringReplaced("chegou-ao-poder-maximo"));
                 return;
             }
-            FactionsPower.getMain().getItemUtils().removeAmount(player.getInventory(), 1);
+            FactionsPower.getMain().getItemUtils().removeAmount(player.getItemInHand(), 1, player.getInventory());
             mp.setPower(atual + novo);
             String msg = FactionsPower.getMain().getLang().getStringReplaced("action-bar-mensagem.mensagem-adcional");
             msg = msg.replaceAll("&", "§").replace("%valor%", new DecimalFormat("0.##").format(atual + novo));
+           fireWork(player.getLocation());
+            player.playSound(player.getLocation(), Sound.NOTE_PLING, 1.5F, 1.5F);
             this.sendActionBar(player, "{\"text\":\"%msg%\"}"
                     .replace("%msg%", msg));
         }

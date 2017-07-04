@@ -1,5 +1,6 @@
 #Arquivo de linguagem, feito com suporte a UTF8
 chegou-ao-limite: "&7Você chegou ao nível máximo"
+chegou-ao-poder-maximo: "&7Você chegou ao poder maximo"
 action-bar-mensagem:
  mensagem-max: "&bVocê umentou seu poder maximo! atual agora é &c%valor%"
  mensagem-adcional: "&bVocê umentou seu poder adcional! atual agora é &c%valor%"

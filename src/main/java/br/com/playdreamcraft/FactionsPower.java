@@ -53,7 +53,7 @@ public class FactionsPower extends JavaPlugin {
 
     private void setupInstances(){
         PluginManager pm = getServer().getPluginManager();
-        pm.registerEvents(new MainEvents(), this);
+        pm.registerEvents(new MainEvents(Cooldown.getInstance()), this);
         pm.registerEvents(new FireWorkApiDamageable(this), this);
         getCommand("factionspower").setExecutor(new MainCommands(getLang()));
         itemUtils = new ItemUtils(getConfig(), getLang());
