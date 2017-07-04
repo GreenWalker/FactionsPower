@@ -3,8 +3,7 @@ package br.com.playdreamcraft.events;
 
 import br.com.playdreamcraft.FactionsPower;
 import br.com.playdreamcraft.Util.UtilMethods;
-import com.massivecraft.factions.Factions;
-import com.massivecraft.factions.entity.MPlayer;
+import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -12,6 +11,7 @@ import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.inventory.AnvilInventory;
+import org.bukkit.inventory.ItemStack;
 
 public class MainEvents implements Listener {
 
@@ -20,20 +20,29 @@ public class MainEvents implements Listener {
         if(event.getWhoClicked() instanceof Player){
             Player p = (Player) event.getWhoClicked();
             if(event.getInventory() instanceof AnvilInventory){
-                if(FactionsPower.getMain().getConf().getBoolean("RenomarNaBigorna")){
-
+                if(!FactionsPower.getMain().getConf().getBoolean("RenomarNaBigorna")){
+                    ItemStack item = event.getCurrentItem();
+                    if(item.hasItemMeta() && item.getItemMeta().getEnchants().containsKey(Enchantment.DURABILITY) &&
+                            (item.getType().toString().equals(FactionsPower.getMain().getConf().getString("Poderes.PoderMaximo.item")) ||
+                                    item.getType().toString().equals(FactionsPower.getMain().getConf().getString("Poderes.PodesAdcional.item")))){
+                    event.setCancelled(true);
+                    p.sendMessage("você não pode renomear este item!");
+                    return;
+                    }
                 }
             }
         }
     }
 
     @EventHandler
-    public void onRightClick(PlayerInteractEvent event){
-        MPlayer player = MPlayer.get(event.getPlayer());
+    public void onJoin(PlayerJoinEvent event){
+        Player p = event.getPlayer();
+        UtilMethods.getInstance().setPower(p.getItemInHand(), p);
     }
 
     @EventHandler
-    public void onJoin(PlayerJoinEvent event){
-        UtilMethods.getInstance().setPower(event.getPlayer(), 0);
+    public void onInteract(PlayerInteractEvent event){
+        Player p = event.getPlayer();
+        UtilMethods.getInstance().setPower(p.getItemInHand(), p);
     }
 }

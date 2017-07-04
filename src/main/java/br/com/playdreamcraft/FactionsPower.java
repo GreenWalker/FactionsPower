@@ -1,5 +1,6 @@
 package br.com.playdreamcraft;
 
+import br.com.playdreamcraft.Util.ItemUtils;
 import br.com.playdreamcraft.config.ConfigHandler;
 import br.com.playdreamcraft.events.MainEvents;
 import org.bukkit.configuration.InvalidConfigurationException;
@@ -14,6 +15,7 @@ public class FactionsPower extends JavaPlugin {
 
     private static FactionsPower main;
     private ConfigHandler lang;
+    private ItemUtils itemUtils;
 
     @Override
     public void onEnable() {
@@ -52,9 +54,18 @@ public class FactionsPower extends JavaPlugin {
     private void setupInstances(){
         PluginManager pm = getServer().getPluginManager();
         pm.registerEvents(new MainEvents(), this);
+        itemUtils = new ItemUtils();
     }
 
     public FileConfiguration getConf(){
         return getConfig();
+    }
+
+    public ConfigHandler getLang() {
+        return lang;
+    }
+
+    public ItemUtils getItemUtils() {
+        return itemUtils;
     }
 }

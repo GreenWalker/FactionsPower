@@ -1,1 +1,20 @@
-RenomearNaBigorna:
+RenomearNaBigorna: false
+
+Poderes:
+ tempo-de-delay-para-usar-poder:
+  ativo: true
+  delay: 30 #EM SEGUNDOS
+ soltar-fogos-ao-usar-poder: true
+ PoderMaximo:
+  valor: 1.0
+  maximo: 60
+  item: NETHER_STAR
+  nome: &7Ganhe Poder &aMáximo &7(botão direito)
+  lore:
+   - '&7usando este item voce ganha +&a%valor%&r&7 de poder'
+  PoderAdcional:
+   valor: 1.0
+   item: NETHER_STAR
+   nome: &7Ganhe Poder &aAdcional &7(botão direito)
+   lore:
+      - '&7usando este item voce ganha +&a%valor%&r&7 de poder adcional'

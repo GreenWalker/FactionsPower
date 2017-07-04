@@ -1,14 +1,13 @@
 package br.com.playdreamcraft.Util;
 
 import org.bukkit.entity.Player;
+import org.bukkit.inventory.ItemStack;
 
 public interface Methods{
 
-    void setPower(Player player, double quant);
+    void setPower(ItemStack powerItem, Player player);
 
-    double getPower();
-
-    void setActionBar(String msg);
+    void sendActionBar(Player player, String json);
 
 
 }
