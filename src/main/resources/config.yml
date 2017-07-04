@@ -8,13 +8,15 @@ Poderes:
  PoderMaximo:
   valor: 1.0
   maximo: 60
-  item: NETHER_STAR
-  nome: &7Ganhe Poder &aMáximo &7(botão direito)
+  item: 'NETHER_STAR'
+  nome: '&7Ganhe Poder &aMáximo &7(botão direito)'
+  nome-msg: '&7Estrela &aMáxima'
   lore:
    - '&7usando este item voce ganha +&a%valor%&r&7 de poder'
-  PoderAdcional:
+  PoderAdcional: #faltou o i eu sei :(
    valor: 1.0
-   item: NETHER_STAR
-   nome: &7Ganhe Poder &aAdcional &7(botão direito)
+   item: 'NETHER_STAR'
+   nome: '&7Ganhe Poder &aAdcional &7(botão direito)'
+   nome-msg: '&7Estrela &aAdcional'
    lore:
       - '&7usando este item voce ganha +&a%valor%&r&7 de poder adcional'

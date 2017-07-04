@@ -7,10 +7,9 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
 import java.util.Arrays;
+import java.util.List;
 
-/**
- * Created by gusta on 03/07/2017.
- */
+
 public class Item {
 
     private ItemStack item;
@@ -38,7 +37,7 @@ public class Item {
         return this;
     }
 
-    public Item setLore(String ... args){
+    public Item setLore(String[] args){
         ItemMeta meta = this.item.getItemMeta();
         for(int i = 0; i < args.length; i++){
             args[i] = args[i].replaceAll("&", "§");
@@ -48,14 +47,22 @@ public class Item {
         return this;
     }
 
-    public Item addEnchantment(Enchantment enchantment, int lvl){
+    public Item setLore(List<String> args){
         ItemMeta meta = this.item.getItemMeta();
-        meta.addEnchant(enchantment, lvl ,false);
+        for (String arg : args) {
+            arg.replaceAll("&", "§");
+        }
+        meta.setLore(args);
         this.item.setItemMeta(meta);
         return this;
     }
 
-    public Item hideAttibutes(boolean b){
+    public Item addEnchantment(Enchantment enchantment, int lvl){
+        this.item.addUnsafeEnchantment(enchantment, lvl);
+        return this;
+    }
+
+    public Item hideAttibutes(){
         ItemMeta meta = this.item.getItemMeta();
         meta.addItemFlags(ItemFlag.HIDE_DESTROYS, ItemFlag.HIDE_ENCHANTS);
         this.item.setItemMeta(meta);
@@ -63,7 +70,7 @@ public class Item {
     }
 
     public Item setValue(int value){
-        if(this.item.getAmount() >= 64){
+        if(this.item.getAmount() > 64){
             return this;
         }
         this.item.setAmount(value);

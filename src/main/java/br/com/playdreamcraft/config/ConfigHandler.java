@@ -10,9 +10,7 @@ import org.bukkit.configuration.InvalidConfigurationException;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.plugin.Plugin;
 
-/**
- * Created by gusta on 01/05/2017.
- */
+
 public class ConfigHandler extends YamlConfiguration {
 
     private File file = null;
@@ -40,12 +38,13 @@ public class ConfigHandler extends YamlConfiguration {
     }
 
     @Override
-    public void load(File file) throws FileNotFoundException, IOException, InvalidConfigurationException {
+    public void load(File file) throws IOException, InvalidConfigurationException {
         Validate.notNull(file, "file nao pode ser null");
         this.load(new InputStreamReader(new FileInputStream(file), Charsets.UTF_8));
     }
 
     @Override
+    @Deprecated
     public void load(InputStream stream) throws IOException, InvalidConfigurationException {
         Validate.notNull(stream, "stream nao pode ser null");
         this.load(new InputStreamReader(stream, Charsets.UTF_8));

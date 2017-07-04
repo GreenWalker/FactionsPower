@@ -1,6 +1,8 @@
 package br.com.playdreamcraft;
 
 import br.com.playdreamcraft.Util.ItemUtils;
+import br.com.playdreamcraft.Util.fireworkutil.FireWorkApiDamageable;
+import br.com.playdreamcraft.commands.MainCommands;
 import br.com.playdreamcraft.config.ConfigHandler;
 import br.com.playdreamcraft.events.MainEvents;
 import org.bukkit.configuration.InvalidConfigurationException;
@@ -41,9 +43,7 @@ public class FactionsPower extends JavaPlugin {
     private void setupConfig(){
         try {
             lang = new ConfigHandler(this, "lang.yml");
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (InvalidConfigurationException e) {
+        } catch (IOException | InvalidConfigurationException e) {
             e.printStackTrace();
         }
         if(!new File(getDataFolder().getPath(), "config.yml").exists()){
@@ -54,7 +54,9 @@ public class FactionsPower extends JavaPlugin {
     private void setupInstances(){
         PluginManager pm = getServer().getPluginManager();
         pm.registerEvents(new MainEvents(), this);
-        itemUtils = new ItemUtils();
+        pm.registerEvents(new FireWorkApiDamageable(this), this);
+        getCommand("factionspower").setExecutor(new MainCommands(getLang()));
+        itemUtils = new ItemUtils(getConfig(), getLang());
     }
 
     public FileConfiguration getConf(){
