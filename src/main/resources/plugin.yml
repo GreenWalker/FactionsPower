@@ -2,3 +2,13 @@ name: FactionsPower
 main: br.com.playdreamcraft.FactionsPower
 version: 1.0
 prefix: FacPower
+loadbefore: [MassiveCore, Factions]
+commands:
+ factionspower:
+  aliases: [fc, facp, fcp]
+  description: utilize para ganahr o item de poder
+  permission: fc.give
+  permission-message: §cVoce nao tem permissao para fazer isto.
+permissions:
+ fc.give:
+  default: op
