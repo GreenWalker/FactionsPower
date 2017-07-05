@@ -11,6 +11,7 @@ import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 
 import javax.annotation.Nonnull;
+import java.text.DecimalFormat;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
@@ -106,9 +107,12 @@ public class ItemUtils {
      */
     public Item suchItem(String path, int value){
         Item it = new Item(config.getString("Poderes." + path + ".item"));
-        it.setName(config.getString("Poderes." + path + ".nome"))
-                .setLore(config.getStringList("Poderes." + path + ".lore".replace("%valor%", String.valueOf(config.getInt("Poderes." + path + "valor")))))
-                .setValue(value > 0 ? value : 1).hideAttibutes();
+        List<String> lore = config.getStringList("Poderes." + path + ".lore");
+        for(int i = 0; i < lore.size(); i++){
+            String lorereplace = lore.get(i).replace("%valor%", String.valueOf(config.getInt("Poderes." + path + ".valor")));
+            lore.set(i, lorereplace);
+        }
+        it.setName(config.getString("Poderes." + path + ".nome")).setLore(lore).setValue(value > 0 ? value : 1).hideAttibutes();
         return it;
     }
 

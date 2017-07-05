@@ -49,8 +49,9 @@ public class Item {
 
     public Item setLore(List<String> args){
         ItemMeta meta = this.item.getItemMeta();
-        for (String arg : args) {
-            arg.replaceAll("&", "§");
+        for (int i = 0; i < args.size(); i++) {
+            String s = args.get(i).replaceAll("&", "§");
+            args.set(i, s);
         }
         meta.setLore(args);
         this.item.setItemMeta(meta);
